@@ -21,9 +21,15 @@ class TextConverter extends React.Component {
 
 	render() {
 		return (
-			<div>
-			 <RawText handleChange={this.handleChange}/>
-			 <ReactMarkDown children={this.state.rawText} />
+			<div className="text-wrapper">
+				<h1>Markdown to HTML converter</h1>
+				<div className={"text"}>
+					
+					<RawText handleChange={this.handleChange}/>
+					<div className={"text-rich"}>
+					 	<ReactMarkDown children={this.state.rawText} />
+					</div>
+				</div>
 			</div>
 		)
 	}
