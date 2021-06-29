@@ -1,7 +1,7 @@
 function RawText(props) {
 	return(
 		<div className={"text-raw"} >
-			<textarea onChange={props.handleChange}/>
+			<textarea onChange={props.handleChange} value={props.text}/>
 		</div>
 	)
 }
