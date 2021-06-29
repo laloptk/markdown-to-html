@@ -1,6 +1,7 @@
 import React from 'react';
 import RawText from './RawText.js';
 import ReactMarkDown from "react-markdown";
+import gfm from 'remark-gfm'
 
 class TextConverter extends React.Component {
 	constructor(props) {
@@ -23,13 +24,6 @@ line 4
 #### h4
 ##### h5
 ###### h6
-
- # h1
- ## h2
- ### h3
- #### h4
- ##### h5
- ###### h6
 
 # header *italic*
 ## header _italic text_
@@ -123,10 +117,16 @@ code block
 		return (
 			<div className="text-wrapper">
 				<h1>Markdown to HTML converter</h1>
+				<p>
+					This is a simple text area that, can turn markdown sintax into HTML. Edit the text in the textarea 
+					so you can see the changes in the right side of the page
+				</p>
+
+				<p>This project was made using create-react-app along with react-markdown and react-redux</p>
 				<div className={"text"}>					
 					<RawText handleChange={this.handleChange} text={this.state.rawText} />
 					<div className={"text-rich"}>
-					 	<ReactMarkDown children={this.state.rawText} />
+					 	<ReactMarkDown children={this.state.rawText} remarkPlugins={[[gfm, {singleTilde: false}]]}/>
 					</div>
 				</div>
 			</div>
