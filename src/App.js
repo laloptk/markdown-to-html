@@ -1,5 +1,4 @@
 import './App.scss';
-import ReactDOM from 'react-dom'
 import TextConverter from './TextConverter.js'
 import { createStore } from 'redux'
 import convertTextReducer from './redux-store/reducers'
