@@ -13,7 +13,7 @@ body {
   }
 
   p {
-    color: #ffffff;
+    color: #999999;
     font-size: 22px;
     font-family: Helvetica;
     line-height: 1.5;
@@ -30,10 +30,10 @@ body {
     position: relative;
     
     textarea {
-      font-family: Helvetica;
+      font-family: monospace;
       width: 100%;
       min-height: 60vh;
-      font-size: 22px;
+      font-size: 20px;
     }
   }
 
@@ -42,11 +42,11 @@ body {
     padding-left: 30px;
     height: 60vh;
     overflow: auto;
-    border: 1px solid #ffffff;
+    border: 1px solid #999999;
 
     * {
       font-family: Helvetica;
-      color: #ffffff;
+      color: #999999;
     }
 
     h1 {
